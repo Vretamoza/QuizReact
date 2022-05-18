@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-export default function Component(props) {
+export default function Fruit(props) {
 
   const [quantity, setValue] = useState(0);
 
@@ -23,10 +23,11 @@ export default function Component(props) {
       <p>
         <strong>Total:</strong> {props.price * quantity}
       </p>
-
-      <button className="px-2 bg-slate-500 text-white font-black rounded" onClick={add}>+</button>
-      <button className="px-2 bg-slate-500 text-white font-black rounded" onClick={remove}>-</button>
-      <button className="px-2 bg-slate-500 text-white font-black rounded" onClick={clean}>Limpiar</button>
+      <div className="flex gap-1">
+        <button className="px-2 bg-slate-500 text-white font-black rounded" onClick={add}>+</button>
+        <button className="px-2 bg-slate-500 text-white font-black rounded" onClick={remove}>-</button>
+        <button className="px-2 bg-slate-500 text-white font-black rounded" onClick={clean}>Limpiar</button>
+      </div>
       <hr />
     </div>
   );
